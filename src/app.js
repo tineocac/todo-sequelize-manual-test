@@ -1,26 +1,24 @@
 const express = require("express");
 const initModels = require("./models/initModels");
-// Importamos la instacia db de database.js
+// importamos la instancia db de database.js
 const db = require("./utils/database");
 
 const app = express();
 
 const PORT = 8000;
 
-db.authenticate() // devuleve una promesa
-  .then(() => console.log("Seuccesfully aunthenticate"))
+db.authenticate() // devuelve una promesa
+  .then(() => console.log("Autenticación exitosa"))
   .catch((error) => console.log(error));
 
-db.sync({ force: true })
-  .then(() => console.log("database syncroned"))
+db.sync({ force: true }) // devuelve una promesa
+  .then(() => console.log("Base sincronizada"))
   .catch((error) => console.log(error));
 
 initModels();
 
 app.get("/", (req, res) => {
-  res.status(200).json("Everything is okey");
+  res.status(200).json("Todo bien");
 });
 
-app.listen(PORT, () => {
-  console.log(`server is running in the port${PORT}`);
-});
+app.listen(PORT, () => console.log("Servidor corriendo"));

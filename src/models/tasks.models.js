@@ -21,7 +21,7 @@ const Tasks = db.define("tasks", {
     defaultValue: false,
   },
   userId: {
-    tpye: DataTypes.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false,
     references: {
       key: "id",

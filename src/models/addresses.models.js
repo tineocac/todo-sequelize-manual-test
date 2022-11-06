@@ -1,8 +1,8 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
-const Adress = db.define(
-  "adresses",
+const Address = db.define(
+  "addresses",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,7 +15,7 @@ const Adress = db.define(
       allowNull: false,
     },
     number: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     userId: {
@@ -33,4 +33,4 @@ const Adress = db.define(
   }
 );
 
-module.exports = Adress;
+module.exports = Address;

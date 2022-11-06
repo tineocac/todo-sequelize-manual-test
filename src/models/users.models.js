@@ -27,3 +27,6 @@ const Users = db.define("users", {
 });
 
 module.exports = Users;
+
+// crear el modelo para tasks --> ponerlo dentro de initModels para que
+// se cree la tabla en la base de datos
