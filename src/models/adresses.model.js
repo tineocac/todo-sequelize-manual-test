@@ -10,7 +10,7 @@ const Adress = db.define(
       primaryKey: true,
       allowNull: false,
     },
-    adress: {
+    street: {
       type: DataTypes.STRING,
       allowNull: false,
     },

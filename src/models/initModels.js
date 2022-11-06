@@ -22,6 +22,7 @@ const initModels = () => {
     through: "task_categories",
     foreignKey: "category_id",
   });
+  
   Categories.belongsToMany(Tasks, {
     through: "task_categories",
     foreignKey: "task_id",
