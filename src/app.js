@@ -11,7 +11,7 @@ db.authenticate() // devuleve una promesa
   .then(() => console.log("Seuccesfully aunthenticate"))
   .catch((error) => console.log(error));
 
-db.sync({ force: false })
+db.sync({ force: true })
   .then(() => console.log("database syncroned"))
   .catch((error) => console.log(error));
 

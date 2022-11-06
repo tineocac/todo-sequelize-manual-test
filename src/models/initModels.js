@@ -2,8 +2,10 @@ const Addresses = require("./adresses.model");
 const Users = require("./users.models");
 const Tasks = require("./tasks.model");
 const Categories = require("./categories.model");
+const TaskCategories = require("./taskcategories.models");
 
 const initModels = () => {
+  TaskCategories;
   // 1 - 1 uno a uno one to one
   // Una direccion pertenece a un usuario
   Addresses.belongsTo(Users, { as: "resident", foreignKey: "user_id" });
@@ -22,7 +24,7 @@ const initModels = () => {
     through: "task_categories",
     foreignKey: "category_id",
   });
-  
+
   Categories.belongsToMany(Tasks, {
     through: "task_categories",
     foreignKey: "task_id",
